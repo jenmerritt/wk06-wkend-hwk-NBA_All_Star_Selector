@@ -62,30 +62,91 @@
           <option value="Utah Jazz">Utah Jazz</option>
         </select>
       </div>
-    <div class="form-item-label">
-      <label for="position" class="primary">Position</label>
-    </div>
-    <div class="form-item">
-      <select id="position" required>
-        <option value="" disabled selected></option>
-        <option value="Guard">Guard</option>
-        <option value="Forward">Forward</option>
-        <option value="Center">Center</option>
-      </select>
-    </div>
-    <div class="form-item-label">
-      <label for="reason" class="primary">Reason</label>
-    </div>
-    <div class="form-item">
-      <textarea id="reason" rows="3" cols="25" required></textarea>
-    </div>
-    <input type="submit" value="Save Player" class="button"/>
-  </form>
-</div>
-<h1 id="list-header">Your All-Star Selection:</h1>
-<ul id="player-list"></ul>
-<div class="delete-button-wrapper">
-  <button id="delete-button" class="button">Clear List</button>
-</div>
+      <div class="form-item-label">
+        <label for="position" class="primary">Position</label>
+      </div>
+      <div class="form-item">
+        <select id="position" required>
+          <option value="" disabled selected></option>
+          <option value="Guard">Guard</option>
+          <option value="Forward">Forward</option>
+          <option value="Center">Center</option>
+        </select>
+      </div>
+      <div class="form-item-label">
+        <label for="reason" class="primary">Reason</label>
+      </div>
+      <div class="form-item">
+        <textarea id="reason" maxlength="350" wrap="hard" rows="3" cols="25" required></textarea>
+      </div>
+      <input type="submit" value="Save Player" class="button"/>
+    </form>
+  </div>
+  <hr>
+  <div id="list-header">
+    <h2>Your All-Star Selection:</h2>
+  </div>
+  <div id="list-section-wrapper">
+    <ul id="player-list">
+      <!-- <li>
+        <h2>Lebron James</h2>
+        <h3>Los Angeles Lakers</h3>
+        <p>Forward</p>
+        <p>Selected because...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius sapien luctus metus dignissim, eget vestibulum dolor elementum. Maecenas in odio justo.</p>
+      </li>
+      <li>
+        <h2>Steph Curry</h2>
+        <h3>Golden State Warriors</h3>
+        <p>Guard</p>
+        <p>Selected because...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+      </li>
+      <li>
+        <h2>Giannis Anteteko</h2>
+        <h3>Milwaukee Bucks</h3>
+        <p>Forward</p>
+        <p>Selected because...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius sapien</p>
+      </li>
+      <li>
+        <h2>Lebron James</h2>
+        <h3>Los Angeles Lakers</h3>
+        <p>Forward</p>
+        <p>Selected because...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius sapien luctus metus dignissim, eget vestibulum dolor elementum. Maecenas in odio justo.</p>
+      </li>
+      <li>
+        <h2>Steph Curry</h2>
+        <h3>Golden State Warriors</h3>
+        <p>Guard</p>
+        <p>Selected because...</p>
+
+      </li>
+      <li>
+        <h2>Giannis Antetekoumpo</h2>
+        <h3>Milwaukee Bucks</h3>
+        <p>Forward</p>
+        <p>Selected because...</p>
+      </li>
+      <li>
+        <h2>Lebron James</h2>
+        <h3>Los Angeles Lakers</h3>
+        <p>Forward</p>
+        <p>Selected because...</p>
+      </li>
+      <li>
+        <h2>Steph Curry</h2>
+        <h3>Golden State Warriors</h3>
+        <p>Guard</p>
+        <p>Selected because...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius sapien luctus metus dignissim.</p>
+      </li> -->
+    </ul>
+  </div>
+  <div id="button-wrapper">
+    <button id="delete-button" class="button">Restart</button>
+  </div>
+
 </body>
 </html>

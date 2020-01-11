@@ -37,19 +37,19 @@ const createPlayerListItem = function (form) {
   // playerListItem.classList.add('player-list-item');
 
 // create a name item and then append to the player list:
-  const playerName = document.createElement('h1');
+  const playerName = document.createElement('h2');
   playerName.id = 'player-name-item';
   playerName.textContent = `${form.name.value}`;
   playerListItem.appendChild(playerName);
 
 // create a team item and then append to the player list:
-  const team = document.createElement('h2');
+  const team = document.createElement('h3');
   team.id = 'team-item';
   team.textContent = `${form.team.value}`;
   playerListItem.appendChild(team);
 
 // create a position item and then append to the player list:
-  const position = document.createElement('p');
+  const position = document.createElement('h3');
   position.id = 'position-item';
   position.textContent = `Position: ${form.position.value}`;
   playerListItem.appendChild(position);
