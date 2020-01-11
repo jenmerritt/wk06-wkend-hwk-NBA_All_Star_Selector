@@ -16,40 +16,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const handleFormSubmit = function () {
+const handleFormSubmit = function (event) {
 // prevent form submitting (it's default behaviour) so page does not refresh:
   event.preventDefault();
 
-// get hold of the ul so items can be appended to it:
-  const list = document.querySelector('#player-list');
-
-// save player name into a li, setup content, and append to ul:
-  const newPlayerNameItem = document.createElement('li');
-  newPlayerNameItem.textContent = `Player Name: ${event.target.name.value}`;
-  list.appendChild(newPlayerNameItem);
-
-// save team into a li, setup content, and append to ul:
-  const newTeamItem = document.createElement('li');
-  newTeamItem.textContent = `Team: ${event.target.team.value}`;
-  list.appendChild(newTeamItem);
-
-// save position into a li, setup content, and append to ul:
-  const newPositionItem = document.createElement('li');
-  newPositionItem.textContent = `Position: ${event.target.position.value}`;
-  list.appendChild(newPositionItem);
-// save reason into a li, setup content, and append to ul:
-  const newReasonItem = document.createElement('li');
-  newReasonItem.textContent = `Reason: ${event.target.reason.value}`;
-  list.appendChild(newReasonItem);
+// create list for submitted form event:
+  const playerListItem = createPlayerListItem(event.target);
+  const playerList = document.querySelector('#player-list');
+  playerList.appendChild(playerListItem);
 
 // clear form:
-  this.reset();
+  event.target.reset();
+
+}
+
+const createPlayerListItem = function (form) {
+
+// create new list item:
+  const playerListItem = document.createElement('li');
+  // playerListItem.classList.add('player-list-item');
+
+// create a name item and then append to the player list:
+  const playerName = document.createElement('h1');
+  playerName.id = 'player-name-item';
+  playerName.textContent = `${form.name.value}`;
+  playerListItem.appendChild(playerName);
+
+// create a team item and then append to the player list:
+  const team = document.createElement('h2');
+  team.id = 'team-item';
+  team.textContent = `${form.team.value}`;
+  playerListItem.appendChild(team);
+
+// create a position item and then append to the player list:
+  const position = document.createElement('p');
+  position.id = 'position-item';
+  position.textContent = `Position: ${form.position.value}`;
+  playerListItem.appendChild(position);
+
+// create a reason header and then append to the player list:
+    const reasonTitle = document.createElement('p');
+    reasonTitle.id = 'reason-title-item';
+    reasonTitle.textContent = `Selected because...`;
+    playerListItem.appendChild(reasonTitle);
+
+// create a reason item and then append to the player list:
+  const reason = document.createElement('p');
+  reason.id = 'reason-item';
+  reason.textContent = `${form.reason.value}`;
+  playerListItem.appendChild(reason);
+
+// return the player list for use in the handleFormSubmit function:
+  return playerListItem;
+
 };
 
 const handleDeleteButtonClick = function () {
   // console.log("button works");
+
 //get hold of the list by id, then innerHTML clears the child elements of it i.e. the li
   document.querySelector("#player-list").innerHTML = "";
-
-
 };
