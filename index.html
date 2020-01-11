@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>NBA All-Star Selection</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="js/app.js"></script>
-  </head>
-  <body>
-
+<head>
+  <meta charset="utf-8">
+  <title>NBA All-Star Selection</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Graduate&display=swap" rel="stylesheet">
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <form id="new-item-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="name" class="primary">Player Name</label>
+        <input type="text" id="name" required/>
+      </div>
+      <div class="form-item">
+        <label for="team" class="primary">Team</label>
+        <select id="team">
+          <option value="" disabled selected></option>
+          <option value="" disabled>Eastern Conference</option>
+          <option value="Atlanta Hawks">Atlanta Hawks</option>
+          <option value="Boston Celtics">Boston Celtics</option>
+          <option value="Brooklyn Nets">Brooklyn Nets</option>
+          <option value="Charlotte Hornets">Charlotte Hornets</option>
+          <option value="Chicago Bulls">Chicago Bulls</option>
+          <option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
+          <option value="Detroit Pistons">Detroit Pistons</option>
+          <option value="Indiana Pacers">Indiana Pacers</option>
+          <option value="Miami Heat">Miami Heat</option>
+          <option value="Milwaukee Bucks">Milwaukee Bucks</option>
+          <option value="New York Knicks">New York Knicks</option>
+          <option value="Orlando Magic">Orlando Magic</option>
+          <option value="Philadelphia 76ers">Philadelphia 76ers</option>
+          <option value="Toronto Raptors">Toronto Raptors</option>
+          <option value="Washington Wizards">Washington Wizards</option>
+          <option value="" disabled>Western Conference</option>
+          <option value="Dallas Mavericks">Dallas Mavericks</option>
+          <option value="Denver Nuggets">Denver Nuggets</option>
+          <option value="Golden State Warriors">Golden State Warriors</option>
+          <option value="Houston Rockets">Houston Rockets</option>
+          <option value="Los Angeles Clippers">Los Angeles Clippers</option>
+          <option value="Los Angeles Lakers">Los Angeles Lakers</option>
+          <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+          <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+          <option value="New Orleans Pelicans">New Orleans Pelicans</option>
+          <option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
+          <option value="Phoenix Suns">Phoenix Suns</option>
+          <option value="Portland Trail Blazers">Portland Trail Blazers</option>
+          <option value="Sacramento Kings">Sacramento Kings</option>
+          <option value="San Antonio Spurs">San Antonio Spurs</option>
+          <option value="Utah Jazz">Utah Jazz</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="position" class="primary">Position</label>
+        <select id="position">
+          <option value="" disabled selected></option>
+          <option value="Guard">Guard</option>
+          <option value="Forward">Forward</option>
+          <option value="Center">Center</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="reason" class="primary">Reason</label>
+        <textarea id="reason" rows="3" cols="25"></textarea>
+      </div>
+      <input type="submit" value="Save Player"/>
+    </form>
+    <div class="list-wrapper">
+      <h1>All-Star Selection</h1>
+        <ul id="player-list"></ul>
+    </div>
   </body>
-</html>
+  </html>
