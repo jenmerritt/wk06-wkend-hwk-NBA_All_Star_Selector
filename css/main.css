@@ -1,9 +1,109 @@
 body {
-  font-family: 'Graduate', cursive;
+  font-family: 'Graduate', sans-serif;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
 }
 
+.button{
+  background-color: #2B4DA9;
+  border: none;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 10px 10px 35px 10px;
+  font-size: 14pt;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: 'Graduate', sans-serif;
+}
+
+#delete-button {
+  padding: 10px 10px 10px 10px !important;
+}
+
+.button:hover {
+  background-color: #416FEF;
+  border: none;
+  color: #ffffff !important;
+  padding: 10px 10px 35px 10px;
+  text-decoration: none !important;
+  font-size: 14pt;
+  margin-bottom: 10px;
+  font-family: 'Graduate', sans-serif;
+}
+
+/* Header section */
+
+#title-wrapper {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#title-wrapper h1{
+    font-size:50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#title-wrapper p{
+    text-align: center;
+}
+
+#header-wrapper {
+  display:flex;
+  background-image: url("../images/bg-img3.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height:300px;
+  justify-content: center;
+}
+
+/* Form */
+
+#form-wrapper{
+  display:flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width:500px;
+  margin-top:50px;
+}
+
+.form-item-label{
+  margin-bottom:15px;
+}
+
+.form-item{
+  margin-bottom:25px;
+}
+
+input {
+  height:30px;
+  width:300px;
+  font-family: 'Graduate', sans-serif;
+  font-size:12pt;
+}
+
+textarea {
+  font-family: 'Graduate', sans-serif;
+  font-size:12pt;
+  width:300px;
+  margin-top:10px;
+}
+
+select {
+  width:300px;
+  height:30px;
+  font-family: 'Graduate', sans-serif;
+  font-size:12pt;
+}
+
+/* Player List */
+
 #player-list ul{
-  
+
 }
 
 #player-list li{
