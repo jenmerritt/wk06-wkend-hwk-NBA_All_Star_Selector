@@ -16,7 +16,7 @@
       </div>
       <div class="form-item">
         <label for="team" class="primary">Team</label>
-        <select id="team">
+        <select id="team" required>
           <option value="" disabled selected></option>
           <option value="" disabled>Eastern Conference</option>
           <option value="Atlanta Hawks">Atlanta Hawks</option>
@@ -54,7 +54,7 @@
       </div>
       <div class="form-item">
         <label for="position" class="primary">Position</label>
-        <select id="position">
+        <select id="position" required>
           <option value="" disabled selected></option>
           <option value="Guard">Guard</option>
           <option value="Forward">Forward</option>
@@ -63,16 +63,15 @@
       </div>
       <div class="form-item">
         <label for="reason" class="primary">Reason</label>
-        <textarea id="reason" rows="3" cols="25"></textarea>
+        <textarea id="reason" rows="3" cols="25" required></textarea>
       </div>
       <input type="submit" value="Save Player"/>
-    </form>
-    <div class="list-wrapper">
-      <h1>All-Star Selection</h1>
-      <ul id="player-list"></ul>
     </div>
-    <div class="delete-button-wrapper">
-      <button id="delete-button">Clear List</button>
-    </div>
-  </body>
-  </html>
+  </form>
+  <h1 id="list-header">All-Star Selection</h1>
+  <ul id="player-list"></ul>
+  <div class="delete-button-wrapper">
+    <button id="delete-button">Clear List</button>
+  </div>
+</body>
+</html>

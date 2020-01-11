@@ -42,12 +42,14 @@ const handleFormSubmit = function () {
   newReasonItem.textContent = `Reason: ${event.target.reason.value}`;
   list.appendChild(newReasonItem);
 
+// clear form:
+  this.reset();
 };
 
 const handleDeleteButtonClick = function () {
   // console.log("button works");
 //get hold of the list by id, then innerHTML clears the child elements of it i.e. the li
-  // document.querySelector('#player-list').innerHTML = " ";
-  // document.getElementById("player-list").innerHTML = "";
+  document.querySelector("#player-list").innerHTML = "";
+
 
 };
